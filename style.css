@@ -1,0 +1,42 @@
+:root{
+  --primary:#0b8457;
+  --bg:#f6f6f6;
+  --card:#fff;
+  --accent:#ffcb05;
+}
+*{box-sizing:border-box}
+body{font-family:Inter, system-ui, Arial; margin:0; background:var(--bg); color:#111}
+.container{max-width:1100px;margin:0 auto;padding:20px}
+.header{background:#fff;padding:12px 0;box-shadow:0 2px 6px rgba(0,0,0,.05)}
+.header .container{display:flex;align-items:center;justify-content:space-between}
+.logo{margin:0;font-size:20px}
+.btn{background:var(--primary);color:#fff;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:600;text-decoration:none;display:inline-block}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:16px}
+.product{background:var(--card);padding:14px;border-radius:10px;box-shadow:0 6px 12px rgba(0,0,0,.04);display:flex;flex-direction:column;justify-content:space-between}
+.product img{width:100%;height:150px;object-fit:cover;border-radius:8px}
+.product h4{margin:10px 0 6px;font-size:16px}
+.product p{margin:0 0 10px;color:#555;font-size:14px}
+.product .actions{display:flex;gap:8px;align-items:center}
+.qty{display:flex;align-items:center;gap:6px}
+.qty button{padding:6px 8px;border-radius:6px;border:1px solid #ddd;background:#fff;cursor:pointer}
+.price{font-weight:700}
+
+/* Modal cart */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.45);z-index:60}
+.hidden{display:none}
+.modal-content{background:var(--card);width:100%;max-width:560px;border-radius:12px;padding:18px;position:relative}
+.close{position:absolute;right:12px;top:10px;border:none;background:transparent;font-size:26px;cursor:pointer}
+#cart-items{margin-top:8px;max-height:320px;overflow:auto}
+.cart-item{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #eee}
+.cart-item img{width:64px;height:64px;object-fit:cover;border-radius:8px}
+.cart-footer{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
+.whatsapp{background:#25D366}
+.whatsapp-float{
+  position:fixed;right:18px;bottom:18px;background:#25D366;color:#fff;border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 18px rgba(0,0,0,.16);z-index:80;text-decoration:none
+}
+.total{font-weight:800}
+
+/* Responsive tweaks */
+@media (max-width:520px){
+  .product img{height:120px}
+}
